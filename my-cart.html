@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My cart</title>
+    <link rel="stylesheet" href="./css/my-cart.css">
+    <!-- Bootstrap 4 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css">
+    <script src="js/jquery.min.js"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-light bg-C6CBFF navbar-expand-lg">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
+            aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <a class="navbar-brand" href="#">
+            <span class="logo">S</span>
+            <div class="shop-name">Shopka</div>
+        </a>
+
+        <div class="collapse navbar-collapse" id="navbarToggler">
+            <div class="form-center">
+                <div class="form-search">
+                    <i class="fa fa-search" style="margin: 0 10px; font-size: 20px; color:#787885"></i>
+                    <input type="text" placeholder="Search...">
+                </div>
+            </div>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <div class="my-cart mr-lg-3">
+                            <div>My cart</div>
+                            <div class="item-number">3</div>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <img src="./image/Photo.png" width="40" height="40" class="d-inline-block align-top" alt="">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- body -->
+    <div class="container-fluid">
+        <div class="body-header">
+            <div>Trang chủ</div>
+            <div>/</div>
+            <div>Giỏ hàng</div>
+        </div>
+
+        <div class="body-title">
+            <span>ĐƠN HÀNG CỦA TÔI</span>
+            <span>(8 sản phẩm)</span>
+        </div>
+
+
+        <div class="body-content">
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="box-cart">
+                        <div class="row">
+                            <div class="col-lg-9">
+                                <div class="cart-name">Đàn Ông Sao Hỏa Đàn Bà Sao Kim (Tặng Kèm Bộ Bookmark TiKi Gia
+                                    Đình Yêu Thương)</div>
+                                <div class="cart-author">
+                                    <div>
+                                        Tác giả:
+                                    </div>
+                                    <div>
+                                        John Gray
+                                    </div>
+                                </div>
+                                <div class="cart-note">
+                                    <div>
+                                        Sách có thể bọc bằng:
+                                    </div>
+                                    <div>
+                                        BookCare
+                                    </div>
+                                </div>
+                                <div class="cart-action">
+                                    <div>
+                                        Xóa
+                                    </div>
+                                    <div>
+                                        Để dành mua sau
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="price-sell">
+                                    135.260 đ
+                                </div>
+                                <div class="price-promo">
+                                    <div>188.000 đ</div>
+                                    <div>-28%</div>
+                                </div>
+                                <div class="quantity">
+                                    <div class="quantity-select">
+                                        <button class="entry value-minus1">-</button>
+                                        <div class="entry value1"><span>1</span></div>
+                                        <button class="entry value-plus1 active">+</button>
+                                    </div>
+                                </div>
+                                <!--quantity-->
+                                <script>
+                                    $('.value-plus1').on('click', function () {
+                                        var divUpd = $(this).parent().find('.value1'),
+                                            newVal = parseInt(divUpd.text(), 10) + 1;
+                                        divUpd.text(newVal);
+                                    });
+
+                                    $('.value-minus1').on('click', function () {
+                                        var divUpd = $(this).parent().find('.value1'),
+                                            newVal = parseInt(divUpd.text(), 10) - 1;
+                                        if (newVal >= 1) divUpd.text(newVal);
+                                    });
+                                </script>
+                                <!--quantity-->
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-cart">
+                        <div class="row">
+                            <div class="col-lg-9">
+                                <div class="cart-name">Đàn Ông Sao Hỏa Đàn Bà Sao Kim (Tặng Kèm Bộ Bookmark TiKi Gia
+                                    Đình Yêu Thương)</div>
+                                <div class="cart-author">
+                                    <div>
+                                        Tác giả:
+                                    </div>
+                                    <div>
+                                        John Gray
+                                    </div>
+                                </div>
+                                <div class="cart-note">
+                                    <div>
+                                        Sách có thể bọc bằng:
+                                    </div>
+                                    <div>
+                                        BookCare
+                                    </div>
+                                </div>
+                                <div class="cart-action">
+                                    <div>
+                                        Xóa
+                                    </div>
+                                    <div>
+                                        Để dành mua sau
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="price-sell">
+                                    135.260 đ
+                                </div>
+                                <div class="price-promo">
+                                    <div>188.000 đ</div>
+                                    <div>-28%</div>
+                                </div>
+                                <div class="quantity">
+                                    <div class="quantity-select">
+                                        <button class="entry value-minus1">-</button>
+                                        <div class="entry value1"><span>1</span></div>
+                                        <button class="entry value-plus1 active">+</button>
+                                    </div>
+                                </div>
+                                <!--quantity-->
+                                <script>
+                                    $('.value-plus1').on('click', function () {
+                                        var divUpd = $(this).parent().find('.value1'),
+                                            newVal = parseInt(divUpd.text(), 10) + 1;
+                                        divUpd.text(newVal);
+                                    });
+
+                                    $('.value-minus1').on('click', function () {
+                                        var divUpd = $(this).parent().find('.value1'),
+                                            newVal = parseInt(divUpd.text(), 10) - 1;
+                                        if (newVal >= 1) divUpd.text(newVal);
+                                    });
+                                </script>
+                                <!--quantity-->
+                    
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-cart">
+                        <div class="row">
+                            <div class="col-lg-9">
+                                <div class="cart-name">Đàn Ông Sao Hỏa Đàn Bà Sao Kim (Tặng Kèm Bộ Bookmark TiKi Gia
+                                    Đình Yêu Thương)</div>
+                                <div class="cart-author">
+                                    <div>
+                                        Tác giả:
+                                    </div>
+                                    <div>
+                                        John Gray
+                                    </div>
+                                </div>
+                                <div class="cart-note">
+                                    <div>
+                                        Sách có thể bọc bằng:
+                                    </div>
+                                    <div>
+                                        BookCare
+                                    </div>
+                                </div>
+                                <div class="cart-action">
+                                    <div>
+                                        Xóa
+                                    </div>
+                                    <div>
+                                        Để dành mua sau
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3">
+                                <div class="price-sell">
+                                    135.260 đ
+                                </div>
+                                <div class="price-promo">
+                                    <div>188.000 đ</div>
+                                    <div>-28%</div>
+                                </div>
+                                <div class="quantity">
+                                    <div class="quantity-select">
+                                        <button class="entry value-minus1">-</button>
+                                        <div class="entry value1"><span>1</span></div>
+                                        <button class="entry value-plus1 active">+</button>
+                                    </div>
+                                </div>
+                                <!--quantity-->
+                                <script>
+                                    $('.value-plus1').on('click', function () {
+                                        var divUpd = $(this).parent().find('.value1'),
+                                            newVal = parseInt(divUpd.text(), 10) + 1;
+                                        divUpd.text(newVal);
+                                    });
+
+                                    $('.value-minus1').on('click', function () {
+                                        var divUpd = $(this).parent().find('.value1'),
+                                            newVal = parseInt(divUpd.text(), 10) - 1;
+                                        if (newVal >= 1) divUpd.text(newVal);
+                                    });
+                                </script>
+                                <!--quantity-->
+                    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="box-right">
+                        <div class="title-address">
+                            <div class="text-bold">Địa chỉ nhận hàng</div>
+                            <div>Thay đổi</div>
+                        </div>
+                        <div class="name-phone">
+                            <div>Hoàng Văn Sang</div>
+                            <div>0346061100</div>
+                        </div>
+                        <div class="address">
+                            KTX khu B đại học quốc gia TPHCM, phường linh Trung, Quận Thủ Đức, TP.Hồ Chí Minh
+                        </div>
+
+                        <div class="title-code-promo text-bold">
+                            Mã khuyến mãi
+                        </div>
+                        <div class="code-promo">
+                            <img src="./image/promo.png" width="20" height="20"
+                                class="d-inline-block align-top" alt="">
+                            <div>Chọn hoặc nhập Khuyến mãi</div>
+                        </div>
+                        <hr/>
+                        <div class="payment">
+                            <div class="row-flex my-3">
+                                <div class="text-bold">Tạm tính</div>
+                                <div class="text-bold">12.211.040 đ</div>
+                            </div>
+                            <div class="row-flex my-3">
+                                <div class="text-bold">Thành tiền</div>
+                                <div>
+                                    <div class="text-bold color-FE3834 text-right">12.211.040 đ</div>
+                                    (Đã bao gồm VAT nếu có)
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="btn-order">Tiến hành đặt hàng</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- footer -->
+
+    <!-- footer -->
+    <div class="container-fluid footer">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                <div class="footer-title">
+                    CHĂM SÓC KHÁCH HÀNG
+                </div>
+                <div class="footer-content">
+                    <div><a>Trung tâm trợ giúp</a></div>
+                    <div><a>Hướng dẫn mua hàng</a></div>
+                    <div><a>Hướng dẫn thanh toán</a></div>
+                    <div><a>Hướng dẫn mua hàng</a></div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 mb-4">
+                <div class="footer-title">
+                    VỀ CHÚNG TÔI
+                </div>
+                <div class="footer-content">
+                    <div><a>Giới thiệu</a></div>
+                    <div><a>Tuyển dụng</a></div>
+                    <div><a>Điều khoản</a></div>
+                    <div><a>Bảo mật</a></div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 mb-4">
+                <div class="footer-title">
+                    THEO DÕI CHÚNG TÔI TRÊN
+                </div>
+                <div class="footer-content">
+                    <div><a>Facebook</a></div>
+                    <div><a>Instagram</a></div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 mb-4">
+                <div class="footer-title">
+                    THANH TOÁN
+                </div>
+                <div class="footer-content">
+                    <div>
+                        <a>
+                            <img src="https://cdn.vox-cdn.com/thumbor/UKSLdttYoIK2bv1gd231rqL4eiQ=/1400x788/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/13674554/Mastercard_logo.jpg"
+                                width="80" height="50" class="d-inline-block align-top" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a>
+                            <img src="https://smartworknet.eu/wp-content/uploads/2019/10/PayPal-Header-720x480.jpg"
+                                width="80" height="50" class="d-inline-block align-top" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

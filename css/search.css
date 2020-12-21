@@ -1,0 +1,380 @@
+.body {
+    font-family: "Fira Sans", sans-serif;
+    line-height: 16px;
+}
+
+/* navbar */
+
+.navbar {
+    height: 75px;
+}
+
+.bg-C6CBFF {
+    background-color: #C6CBFF;
+}
+
+.navbar-brand {
+    display: flex !important;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.logo {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-image: linear-gradient(to right, #2979FF, #4C589E);
+    border-radius: 4px;
+    font-size: 33px;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    margin-right: 15px;
+}
+
+.shop-name {
+    color: #0C2146;
+    font-size: 34px;
+    font-weight: 600;
+}
+
+.form-center {
+    margin: 0 auto;
+}
+
+.form-search {
+    width: 350px;
+    height: 35px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #EDEDF0;
+}
+
+.form-search input {
+    border: unset;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    background-color: #EDEDF0;
+    padding: 5px;
+}
+
+.form-search input:focus {
+    outline: unset;
+}
+
+.my-cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0px 8px 8px 0 #2979FF;
+    width: 70px;
+    height: 35px;
+    position: relative;
+    border-radius: 2px;
+}
+
+.my-cart div:nth-child(1) {
+    font-weight: 600;
+    color: #2979FF;
+}
+
+.item-number {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: red;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+}
+
+/* body */
+
+.body-header {
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.body-header div:nth-child(1) {
+    color: #A9A9A9;
+}
+
+.body-header div:nth-child(2) {
+    color: #A9A9A9;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.body-header div:nth-child(3) {
+    color: #151515;
+}
+
+.body-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.product-number {
+    display: flex;
+    align-items: center;
+}
+
+.product-number div:nth-child(1) {
+    background-color: #F4F8EC;
+    color: #6A983C;
+    border-radius: 8px;
+    margin-right: 5px;
+    padding: 5px 10px;
+    font-weight: 600;
+}
+
+.product-number div:nth-child(2) {
+    color: #A9A9A9;
+}
+
+#divider {
+    border-top-width: 3px;
+}
+
+.hr {
+    border-top-width: 1px !important;
+}
+
+.body-content {
+    padding: 0px 50px;
+}
+
+.content-title {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.row-category {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.row-category div:nth-child(2) {
+    background-color: #F4F8EC;
+    color: #6A983C;
+    border-radius: 8px;
+    margin-right: 5px;
+    padding: 5px 10px;
+    font-weight: 600;
+}
+
+.row-filter {
+    display: flex;
+    margin: 10px 0;
+    align-items: center;
+}
+
+.row-filter input {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.row-evaluate {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.row-evaluate input {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.star {
+    display: flex;
+}
+
+.star i {
+    margin: 0 2px;
+    color: yellow;
+    font-size: 20px;
+}
+
+.color-D1D1D1 {
+    color: #D1D1D1 !important;
+}
+
+.color-yellow {
+    color: yellow
+}
+
+.row-price {
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: space-between;
+    margin: 20px 0 20px;
+}
+
+.row-price input {
+    background-color: #F9F9F9;
+    border: 1px solid #D1D1D1;
+    border-radius: 8px;
+    width: 110px;
+    height: 40px;
+    padding: 5px;
+}
+
+.row-price input:focus {
+    outline: unset;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .25);
+}
+
+.min {
+    position: absolute;
+    top: -25px;
+    left: 0;
+    font-weight: 500;
+}
+
+.max {
+    position: absolute;
+    top: -25px;
+    right: 80px;
+    font-weight: 500;
+}
+
+.btn-apply {
+    width: 130px;
+    height: 40px;
+    background-color: #6A983C;
+    color: white;
+    border: 1px solid #46760A;
+    border-radius: 4px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.btn-reset {
+    width: 80px;
+    height: 40px;
+    background-color: #F4F8EC;
+    border: 1px solid #46760A;
+    border-radius: 4px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+.box-product {
+    display: flex;
+    border: 1px solid #D1D1D1;
+    border-radius: 8px;
+}
+
+.image-product img {
+    border-radius: 8px;
+}
+
+.description-product {
+    padding: 0 40px;
+    margin: auto 0;
+}
+
+.name-product {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.row-detail {
+    display: flex;
+    margin: 10px 0;
+}
+
+.row-detail div:nth-child(1) {
+    color: #A9A9A9;
+    min-width: 130px;
+}
+
+.row-detail div:nth-child(2) {
+    color: #6A983C;
+}
+
+.price-product {
+    margin: auto 0 auto 20px;
+}
+
+.price-product div:nth-child(1) {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.price-product div:nth-child(2) {   
+    text-decoration: line-through;
+    color: #A9A9A9
+}
+
+.price-product div:nth-child(3) {
+    color: #A9A9A9;
+    margin-top: 20px;
+}
+
+.price-product div:nth-child(4) {
+    color: #A9A9A9;
+}
+
+.btn-product-detail {
+    width: 200px;
+    height: 40px;
+    background-color: #6A983C;
+    color: white;
+    border: 1px solid #46760A;
+    border-radius: 4px;
+    margin-top: 50px;
+    font-weight: 500;
+}
+
+.pagination>li>a,
+.pagination>li>span {
+    /* border-radius: 50% !important; */
+    margin: 0 5px;
+}
+
+.pagination-product {
+    display: flex;
+    justify-content: center;
+}
+
+/* footer */
+
+.footer {
+    background-color: #CCC9C9;
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+}
+
+.footer-title {
+    margin-bottom: 10px;
+}
+
+.footer-content div {
+    margin: 10px 0;
+    cursor: pointer;
+}

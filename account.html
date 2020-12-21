@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account</title>
+    <link rel="stylesheet" href="./css/account.css">
+    <!-- Bootstrap 4 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-light bg-C6CBFF navbar-expand-lg">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
+            aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <a class="navbar-brand" href="#">
+            <span class="logo">S</span>
+            <div class="shop-name">Shopka</div>
+        </a>
+    
+        <div class="collapse navbar-collapse" id="navbarToggler">
+            <div class="form-center">
+                <div class="form-search">
+                    <i class="fa fa-search" style="margin: 0 10px; font-size: 20px; color:#787885"></i>
+                    <input type="text" placeholder="Search...">
+                </div>
+            </div>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <div class="my-cart mr-lg-3">
+                            <div>My cart</div>
+                            <div class="item-number">3</div>
+                        </div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <img src="./image/Photo.png" width="40" height="40" class="d-inline-block align-top" alt="">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- body -->
+    <div class="container-fluid">
+        <div class="body-header">
+            <div>Trang chủ</div>
+            <div>/</div>
+            <div>Tài khoản</div>
+        </div>
+    
+        <div class="body-title">
+            THÔNG TIN TÀI KHOẢN
+        </div>
+    
+        <hr id="divider" />
+    
+        <div class="body-content">
+            <div class="body-content-title">
+                Thông tin tài khoản
+            </div>
+            <form>
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Email" value="abcd@gmail.com" disabled />
+                <br /> <br />
+                <label for="password">Mật khẩu</label>
+                <input type="password" id="password" placeholder="Mật khẩu" value="abc12345678" disabled />
+                <span class="ml-2"><a href="#">Thay đổi mật khẩu</a></span>
+                <br /> <br />
+            </form>
+        </div>
+
+        <hr class="hr" />
+
+        <div class="body-content">
+            <div class="body-content-title">
+                Thông tin cá nhân
+            </div>
+            <form>
+                <label for="name">Họ tên</label>
+                <input type="name" id="name" placeholder="Name" value="Phạm Văn Việt"/>
+                <br /> <br />
+                <label for="gender">Giới tính</label>
+                <select class="select-gender" name="gender" id="gender">
+                    <option>Chọn giới tính</option>
+                    <option selected>Nam</option>
+                    <option>Nữ</option>
+                </select>
+                <br /> <br />
+                <label for="">Ngày sinh</label>
+                <select class="select-dayOfBirth" name="">
+                    <option>Chọn ngày</option>
+                    <option selected>01</option>
+                    <option>02</option>
+                    <option>03</option>
+                    <option>04</option>
+                    <option>05</option>
+                    <option>06</option>
+                    <option>07</option>
+                    <option>08</option>
+                    <option>09</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                    <option>13</option>
+                    <option>14</option>
+                    <option>15</option>
+                    <option>16</option>
+                    <option>17</option>
+                    <option>18</option>
+                    <option>19</option>
+                    <option>20</option>
+                    <option>21</option>
+                    <option>22</option>
+                    <option>23</option>
+                    <option>24</option>
+                    <option>25</option>
+                    <option>26</option>
+                    <option>27</option>
+                    <option>28</option>
+                    <option>29</option>
+                    <option>30</option>
+                    <option>31</option>
+                </select>
+                <select class="select-dayOfBirth" name="">
+                    <option>Chọn tháng</option>
+                    <option selected>01</option>
+                    <option>02</option>
+                    <option>03</option>
+                    <option>04</option>
+                    <option>05</option>
+                    <option>06</option>
+                    <option>07</option>
+                    <option>08</option>
+                    <option>09</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                </select>
+                <select class="select-dayOfBirth" name="">
+                    <option>Chọn năm</option>
+                    <option>1980</option>
+                    <option>1981</option>
+                    <option>1982</option>
+                    <option>1983</option>
+                    <option>1984</option>
+                    <option>1985</option>
+                    <option>1986</option>
+                    <option>1987</option>
+                    <option>1988</option>
+                    <option>1989</option>
+                    <option>1990</option>
+                    <option>1991</option>
+                    <option>1992</option>
+                    <option>1993</option>
+                    <option>1994</option>
+                    <option>1995</option>
+                    <option>1996</option>
+                    <option>1997</option>
+                    <option>1998</option>
+                    <option>1999</option>
+                    <option>2000</option>
+                    <option>2001</option>
+                    <option>2002</option>
+                    <option>2003</option>
+                    <option>2004</option>
+                    <option>2005</option>
+                    <option>2006</option>
+                    <option>2007</option>
+                    <option>2008</option>
+                    <option>2009</option>
+                    <option>2010</option>
+                    <option>2011</option>
+                    <option>2012</option>
+                    <option>2013</option>
+                    <option>2014</option>
+                    <option>2015</option>
+                    <option>2016</option>
+                    <option>2017</option>
+                    <option>2018</option>
+                    <option>2019</option>
+                    <option selected>2020</option>
+                </select>
+                <br /> <br />
+                <label for="phone">Điện thoại</label>
+                <input type="phone" id="phone" placeholder="Số điện thoại" value="0968250823" />
+                <br /> <br />
+                <button type="submit">
+                    Cập nhật
+                </button>
+            </form>
+
+        </div>
+
+        <hr class="hr" />
+
+        <div class="body-content mb-3">
+            <div class="body-content-title">
+                Liên kết tài khoản mạng xã hội
+            </div>
+            <form class="social">
+                <label for="facebook">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1200px-Facebook_Logo_%282019%29.png"
+                        width="40" height="40" class="d-inline-block" alt="">
+                </label>
+                <input type="facebook" id="facebook" placeholder="Facebook" value="https://www.facebook.com/pham.phamvanviet/"/>
+                <br /> <br />
+                <label for="twitter">
+                    <img src="https://upload.wikimedia.org/wikipedia/vi/thumb/9/9f/Twitter_bird_logo_2012.svg/1200px-Twitter_bird_logo_2012.svg.png"
+                        width="40" height="40" class="d-inline-block" alt="">
+                </label>
+                <input type="twitter" id="twitter" placeholder="Twitter" value="https://twitter.com/phamphamviet"/>
+                <br /> <br />
+                <button type="submit">
+                    Cập nhật
+                </button>
+            </form>
+        </div>
+    </div>
+    
+    <!-- footer -->
+    
+    <!-- footer -->
+    <div class="container-fluid footer">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                <div class="footer-title">
+                    CHĂM SÓC KHÁCH HÀNG
+                </div>
+                <div class="footer-content">
+                    <div><a>Trung tâm trợ giúp</a></div>
+                    <div><a>Hướng dẫn mua hàng</a></div>
+                    <div><a>Hướng dẫn thanh toán</a></div>
+                    <div><a>Hướng dẫn mua hàng</a></div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 mb-4">
+                <div class="footer-title">
+                    VỀ CHÚNG TÔI
+                </div>
+                <div class="footer-content">
+                    <div><a>Giới thiệu</a></div>
+                    <div><a>Tuyển dụng</a></div>
+                    <div><a>Điều khoản</a></div>
+                    <div><a>Bảo mật</a></div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 mb-4">
+                <div class="footer-title">
+                    THEO DÕI CHÚNG TÔI TRÊN
+                </div>
+                <div class="footer-content">
+                    <div><a>Facebook</a></div>
+                    <div><a>Instagram</a></div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 mb-4">
+                <div class="footer-title">
+                    THANH TOÁN
+                </div>
+                <div class="footer-content">
+                    <div>
+                        <a>
+                            <img src="https://cdn.vox-cdn.com/thumbor/UKSLdttYoIK2bv1gd231rqL4eiQ=/1400x788/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/13674554/Mastercard_logo.jpg"
+                                width="80" height="50" class="d-inline-block align-top" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a>
+                            <img src="https://smartworknet.eu/wp-content/uploads/2019/10/PayPal-Header-720x480.jpg"
+                                width="80" height="50" class="d-inline-block align-top" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
