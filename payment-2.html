@@ -111,8 +111,8 @@
                         </div>
 
                         <div class="box-payment-method">
-                            <input type="radio" class="shipping-radio" name="shipping">
-                            <span>Thanh toán qua ZaloPay</span>
+                            <input type="radio" class="shipping-radio" name="shipping" id="paypal">
+                            <span>Thanh toán qua Paypal</span>
                         </div>
                     </div>
 
@@ -121,8 +121,99 @@
                         <textarea cols="70" rows="6" placeholder="Ghi chứ về đơn hàng. Ví dụ: lưu ý khi giao hàng"></textarea>
                     </div>
 
-                    <button class="btn-order">Đặt mua</button>
+                    <script type="text/javascript" language="javascript">
+
+                        function send(callback) {
+                            var ItemJSON;
+
+                            ItemJSON = `{
+                                "payment_type_id": 2,
+                                "note": "Tintest 123",
+                                "required_note": "KHONGCHOXEMHANG",
+                                "return_phone": "0968250823",
+                                "return_address": "Phường Cầu Kho, Quận 1, Hồ Chí Minh, Vietnam",
+                                "return_district_id": 1442,
+                                "return_ward_code": "20103",
+                                "client_order_code": "ABC123",
+                                "to_name": "Quoc123",
+                                "to_phone": "0987654321",
+                                "to_address": "Phường Cầu Kho, Quận 1, Hồ Chí Minh, Vietnam",
+                                "to_ward_code": "20103",
+                                "to_district_id": 1442,
+                                "cod_amount": 200000,
+                                "content": "ABCDEF",
+                                "weight": 200,
+                                "length": 15,
+                                "width": 15,
+                                "height": 15,
+                                "pick_station_id": 0,
+                                "deliver_station_id": 0,
+                                "insurance_value": 2000000,
+                                "coupon": null,
+                                "service_id": 0,
+                                "service_type_id": 2,
+                                "items":
+                                [
+                                    {
+                                        "name": "quần dài",
+                                        "code": "sip123",
+                                        "quantity": 1
+                                    }
+                                ]
+                            }`;
+
+                            URL = "https://dev-online-gateway.ghn.vn/shiip/public-api/v2/shipping-order/create";
+
+                            var xmlhttp = new XMLHttpRequest();
+                            xmlhttp.onreadystatechange = function stateChanged() {
+                                if (xmlhttp.readyState == 4) {
+                                    var myObj = JSON.parse(this.responseText);
+                                    callback(myObj.message);
+                                }
+                            }
+
+                            xmlhttp.open("POST", URL, true);
+                            xmlhttp.setRequestHeader("ShopId", "76632");
+                            xmlhttp.setRequestHeader("Content-Type", "application/json");
+                            xmlhttp.setRequestHeader('Token', "b87be86b-413e-11eb-aad2-9ec3d9780e97");
+                            xmlhttp.send(ItemJSON);
+                        }
+                    </script>
+
+                    <button class="btn-order" onclick="javascript:send(alert)">Đặt mua</button>
                     <button class="btn-cancel">Hủy bỏ</button>
+
+                    <div id="paypal-button-container"></div>
+                    <!-- <script
+                        src="https://www.paypal.com/sdk/js?client-id=AQQYWTdEeVF_L-K60f5KXn8e8YpDaqllWUVurTsbRswlDB7Ut1PxZ2So0YnUgPKzywWk4eabSUF3S6Mf&currency=USD"
+                        data-sdk-integration-source="button-factory"></script> -->
+                    <script src="https://www.paypal.com/sdk/js?client-id=AQQYWTdEeVF_L-K60f5KXn8e8YpDaqllWUVurTsbRswlDB7Ut1PxZ2So0YnUgPKzywWk4eabSUF3S6Mf&currency=USD" data-namespace="paypal_sdk"></script>
+                    
+                    <script>
+                        paypal_sdk.Buttons({
+                            style: {
+                                shape: 'pill',
+                                color: 'blue',
+                                layout: 'vertical',
+                                label: 'paypal',
+
+                            },
+                            createOrder: function (data, actions) {
+                                return actions.order.create({
+                                    purchase_units: [{
+                                        amount: {
+                                            value: '100'
+                                        }
+                                    }]
+                                });
+                            },
+                            onApprove: function (data, actions) {
+                                return actions.order.capture().then(function (details) {
+                                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                                });
+                            }
+                        }).render('#paypal-button-container');
+                    </script>
                 </div>
                 <div class="col-lg-6">
                     <div class="box-address mb-5">
