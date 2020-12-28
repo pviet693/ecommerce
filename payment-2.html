@@ -114,6 +114,38 @@
                             <input type="radio" class="shipping-radio" name="shipping" id="paypal">
                             <span>Thanh toán qua Paypal</span>
                         </div>
+                        <div id="paypal-button-container" style="width: 400px; height: 200px;"></div>
+                        <!-- <script
+                                                src="https://www.paypal.com/sdk/js?client-id=AQQYWTdEeVF_L-K60f5KXn8e8YpDaqllWUVurTsbRswlDB7Ut1PxZ2So0YnUgPKzywWk4eabSUF3S6Mf&currency=USD"
+                                                data-sdk-integration-source="button-factory"></script> -->
+                        <script
+                            src="https://www.paypal.com/sdk/js?client-id=AQQYWTdEeVF_L-K60f5KXn8e8YpDaqllWUVurTsbRswlDB7Ut1PxZ2So0YnUgPKzywWk4eabSUF3S6Mf&currency=USD"
+                            data-namespace="paypal_sdk"></script>
+                        
+                        <script>
+                            paypal_sdk.Buttons({
+                                style: {
+                                    shape: 'pill',
+                                    color: 'blue',
+                                    layout: 'vertical',
+                                    label: 'paypal',
+                                },
+                                createOrder: function (data, actions) {
+                                    return actions.order.create({
+                                        purchase_units: [{
+                                            amount: {
+                                                value: '10'
+                                            }
+                                        }]
+                                    });
+                                },
+                                onApprove: function (data, actions) {
+                                    return actions.order.capture().then(function (details) {
+                                        alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                                    });
+                                }
+                            }).render('#paypal-button-container');
+                        </script>
                     </div>
 
                     <div class="more-info">
@@ -183,37 +215,7 @@
                     <button class="btn-order" onclick="javascript:send(alert)">Đặt mua</button>
                     <button class="btn-cancel">Hủy bỏ</button>
 
-                    <div id="paypal-button-container"></div>
-                    <!-- <script
-                        src="https://www.paypal.com/sdk/js?client-id=AQQYWTdEeVF_L-K60f5KXn8e8YpDaqllWUVurTsbRswlDB7Ut1PxZ2So0YnUgPKzywWk4eabSUF3S6Mf&currency=USD"
-                        data-sdk-integration-source="button-factory"></script> -->
-                    <script src="https://www.paypal.com/sdk/js?client-id=AQQYWTdEeVF_L-K60f5KXn8e8YpDaqllWUVurTsbRswlDB7Ut1PxZ2So0YnUgPKzywWk4eabSUF3S6Mf&currency=USD" data-namespace="paypal_sdk"></script>
                     
-                    <script>
-                        paypal_sdk.Buttons({
-                            style: {
-                                shape: 'pill',
-                                color: 'blue',
-                                layout: 'vertical',
-                                label: 'paypal',
-
-                            },
-                            createOrder: function (data, actions) {
-                                return actions.order.create({
-                                    purchase_units: [{
-                                        amount: {
-                                            value: '100'
-                                        }
-                                    }]
-                                });
-                            },
-                            onApprove: function (data, actions) {
-                                return actions.order.capture().then(function (details) {
-                                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
-                                });
-                            }
-                        }).render('#paypal-button-container');
-                    </script>
                 </div>
                 <div class="col-lg-6">
                     <div class="box-address mb-5">
